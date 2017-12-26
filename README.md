@@ -21,7 +21,6 @@ https://docs.python.org/2/library/sqlite3.html
 
 Lastly, this program also pulls information from one of Python's own library known as TK or formally known as Tkinter. To learn more about Tk:
 
-https://docs.python.org/3/library/tk.html 
+https://docs.python.org/3/library/tk.html
 
-# To Run the Program
 
