@@ -15,4 +15,13 @@ For other Linux flavors, OS X and Windows, packages are available at
 
 http://www.python.org/getit/
 
+This program also uses sqllite3, which you can learn about here:
+
+https://docs.python.org/2/library/sqlite3.html
+
+Lastly, this program also pulls information from one of Python's own library known as TK or formally known as Tkinter. To learn more about Tk:
+
+https://docs.python.org/3/library/tk.html 
+
+# To Run the Program
 
