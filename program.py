@@ -10,6 +10,9 @@ from backenddb import Database
 
 database=Database("books.db")
 
+
+# GUI window creation 
+
 class Window(object):
 
     def __init__(self,window):
