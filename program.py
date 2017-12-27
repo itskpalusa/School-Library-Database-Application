@@ -1,5 +1,12 @@
+# import all of the tkinter framework
+
 from tkinter import *
+
+# import the backend code and import the database
+
 from backenddb import Database
+
+#create the database - if not already present
 
 database=Database("books.db")
 
@@ -8,6 +15,8 @@ class Window(object):
     def __init__(self,window):
 
         self.window = window
+
+# name of the school/institution
 
         self.window.wm_title("Elon Musk's School of STEM")
 
