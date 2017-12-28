@@ -17,7 +17,7 @@ Type: Individual
 
 ~~ 1. Track student and teacher names with ability to enter/view/edit names. ~~
 
-~~ 2. Track the issuance of books for a student or teacher. ~~
+2. Track the issuance of books for a student or teacher.
 
 3. Manage different limits for the number of books that can be issued to a student or teacher.
 
