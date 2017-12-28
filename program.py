@@ -11,7 +11,7 @@ from backenddb import Database
 database=Database("books.db")
 
 
-# GUI window creation 
+# GUI window creation
 
 class Window(object):
 
@@ -19,10 +19,11 @@ class Window(object):
 
         self.window = window
 
-# name of the school/institution
+# name of the school/institution through window title.
 
         self.window.wm_title("Elon Musk's School of STEM")
 
+# labeling and grid arrangement
 
         l1=Label(window,text="Book Title")
         l1.grid(row=0,column=0)
@@ -61,6 +62,8 @@ class Window(object):
         self.list1.configure(yscrollcommand=sb1.set)
         sb1.configure(command=self.list1.yview)
 
+        # buttons and grid arrangement
+
         self.list1.bind('<<ListboxSelect>>',self.get_selected_row)
 
         b1=Button(window,text="View all", width=12,command=self.view_command)
@@ -80,6 +83,8 @@ class Window(object):
 
         b6=Button(window,text="Close", width=12,command=window.destroy)
         b6.grid(row=7,column=3)
+
+    # command function writing
 
     def get_selected_row(self,event):
         if len(self.list1.curselection())>0:
@@ -114,6 +119,9 @@ class Window(object):
 
     def update_command(self):
         database.update(self.selected_tuple[0],self.title_text.get(),self.author_text.get(),self.schoolID_text.get(),self.due_text.get())
+
+
+# actual tkinter execution processes. 
 
 window=Tk()
 Window(window)
