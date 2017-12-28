@@ -1,12 +1,19 @@
 # School Library Database Application
-a database application for a school library.
+A python and sqlite3 based database application for a school library.
 
-# FBLA Requirements
+#FBLA  
 
-## Overview
-### Two (2) parts: a prejudged project and a presentation. Competitors must complete both parts for award eligibility.
+Coding & Programming
+Category: Prejudged Projects & Presentation
+Type: Individual
 
-#### Topic: Develop a database program to manage the issuance of books at a school library. Give the school a name. The program must be able to complete a minimum of the following tasks:
+## Requirements
+
+### Overview
+
+#### Two (2) parts: a prejudged project and a presentation. Competitors must complete both parts for award eligibility.
+
+##### Topic: Develop a database program to manage the issuance of books at a school library. Give the school a name. The program must be able to complete a minimum of the following tasks:
 
 1. Track student and teacher names with ability to enter/view/edit names.
 
@@ -22,6 +29,69 @@ a database application for a school library.
 
 7. Generate/print weekly report of detail of fines (when book not returned on time).
 
+
+### Guidelines
+#### Specific Guidelines
+
+* The program must run on Windows XP or higher.
+* Solution must run standalone with no programming errors.
+* Data must be free of viruses/malware. Any entry with contaminated data will not be judged.
+* The program should be shown to the judges.
+
+#### Performance Guidelines
+
+Fifteen (15) competitors/teams—or an equal number from each section in the preliminary round—will advance to the final round. When there are more than five sections of preliminary performances for an event, two competitors/ teams from each section will advance to the final round.
+
+> In the case of team events, all team competitors are expected to actively participate in the performance.
+
+> Competitors cannot be replaced or substituted for prejudged events with the exception of the chapter events—American Enterprise Project, Community Service Project, and Partnership with Business Project.
+
+All competitors must comply with the FBLA‑PBL dress code.
+
+Prejudged materials and résumés will not be returned.
+
+#### Technology Guidelines
+
+The following will be provided for the final round of technology presentation events that allow viewing: screen, power, table, and projector. It is up to final round competitors to decide if they wish to use the provided technology.
+
+Competitors utilizing Apple products or other devices that do not have a VGA port or HDMI will need to provide their own adapters.
+
+Internet access will be provided for:
+* 3-D Animation
+* Coding & Programming
+* Computer Game & Simulation Programming
+* Digital Video Production
+* E-business
+* Electronic Career Portfolio
+* Mobile Application Development
+* Public Service Announcement
+* Social Media Campaign
+* Website Design
+
+###### Internet access may not be WiFi, so competitors should plan appropriately when selecting laptops/tablets on which to present.
+
+#### Performance Competencies
+
+* Demonstrate excellent verbal communication.
+* Display effective decision-making and problem-solving skills.
+* Express self-confidence and poise.
+* Work well as a team when applicable.
+* Exhibit logic and systematic understanding.
+* Conduct a professional business presentation.
+* Answer questions effectively (when applicable).
+
+#### Penalty Points Deducted by Judges
+
+* Five (5) points are deducted if competitors do not follow the dress code.
+* Five (5) points may be deducted for presentations over the allotted time.
+* Five (5) points may be deducted for not following guidelines.
+
+#### Audience
+* Preliminary performances are not open to conference attendees.
+* Final performances may be open to conference attendees, space permitting (with the exception of interview and prep/case events). Finalists may not view other competitors’ performances in their event.
+* Recording performances is prohibited.
+* All electronic devices must be turned off.
+* All attendees must follow the dress code and wear their name badges.
 
 # Requirements
 You need Python 3.4 or later to be able to run the program.
