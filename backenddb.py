@@ -10,7 +10,7 @@ class Database:
     def __init__(self,db):
         self.conn=sqlite3.connect(db)
         self.cur=self.conn.cursor()
-        self.cur.execute("CREATE TABLE IF NOT EXISTS book(id INTEGER PRIMARY KEY,title text ,author text,schoolID INTEGER ,type text,due INTEGER )")
+        self.cur.execute("CREATE TABLE IF NOT EXISTS book(id INTEGER PRIMARY KEY,title text ,author text,schoolID INTEGER ,type text,due datetime )")
         self.conn.commit()
 
 # create the proper layout for the insert function
