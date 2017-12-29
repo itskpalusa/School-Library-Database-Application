@@ -117,15 +117,15 @@ class Window(object):
             self.list1.insert(END,row)
 
     def add_command(self):
-        database.insert(self.title_text.get(),self.author_text.get(),self.schoolID_text.get(),self.due_text.get())
+        database.insert(self.title_text.get(),self.author_text.get(),self.schoolID_text.get(),self.type_text.get(),self.due_text.get())
         self.list1.delete(0,END)
-        self.list1.insert(END,(self.title_text.get(),self.author_text.get(),self.schoolID_text.get(),self.due_text.get()))
+        self.list1.insert(END,(self.title_text.get(),self.author_text.get(),self.schoolID_text.get(),self.type_text.get(),self.due_text.get()))
 
     def delete_command(self):
         database.delete(self.selected_tuple[0])
 
     def update_command(self):
-        database.update(self.selected_tuple[0],self.title_text.get(),self.author_text.get(),self.schoolID_text.get(),self.due_text.get())
+        database.update(self.selected_tuple[0],self.title_text.get(),self.author_text.get(),self.schoolID_text.get(),self.type_text.get(),self.due_text.get())
 
 
 # actual tkinter execution processes.
