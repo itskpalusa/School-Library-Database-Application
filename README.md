@@ -15,7 +15,7 @@ Type: Individual
 
 ##### Topic: Develop a database program to manage the issuance of books at a school library. Give the school a name. The program must be able to complete a minimum of the following tasks:
 
-~~ 1. Track student and teacher names with ability to enter/view/edit names. ~~
+~~1. Track student and teacher names with ability to enter/view/edit names.~~
 
 2. Track the issuance of books for a student or teacher.
 
@@ -23,9 +23,9 @@ Type: Individual
 
 4. Manage the number of days that students and teachers can check out any book. (Hint: Mostly like the number of days will differ for students and teachers).
 
-~~ 5. Give each book a different ID. Also, each book of same name and same author (but number of copies) will have different ID. ~~
+~~5. Give each book a different ID. Also, each book of same name and same author (but number of copies) will have different ID.~~
 
-6. Generate/print weekly report to show books issued to whom and number of days leading to the due date return.
+~~6. Generate/print weekly report to show books issued to whom and number of days leading to the due date return.~~
 
 7. Generate/print weekly report of detail of fines (when book not returned on time).
 
