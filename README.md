@@ -1,7 +1,7 @@
 # School Library Database Application
 A python and sqlite3 based database application for a school library.
 
-#FBLA  
+# FBLA  
 
 Coding & Programming
 Category: Prejudged Projects & Presentation
