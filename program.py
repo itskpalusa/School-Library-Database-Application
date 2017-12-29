@@ -37,6 +37,9 @@ class Window(object):
         l4=Label(window,text="Due Date")
         l4.grid(row=1,column=2)
 
+        l4=Label(window,text="Type")
+        l4.grid(row=2,column=0)
+
         self.title_text=StringVar()
         self.e1=Entry(window,textvariable=self.title_text)
         self.e1.grid(row=0,column=1)
@@ -53,8 +56,12 @@ class Window(object):
         self.e4=Entry(window,textvariable=self.due_text)
         self.e4.grid(row=1,column=3)
 
-        self.list1=Listbox(window, height=6,width=35)
-        self.list1.grid(row=2,column=0,rowspan=6,columnspan=2)
+        self.type_text=StringVar()
+        self.e5=Entry(window,textvariable=self.type_text)
+        self.e5.grid(row=2,column=1)
+
+        self.list1=Listbox(window, height=10,width=45)
+        self.list1.grid(row=3,column=0,rowspan=6,columnspan=2)
 
         sb1=Scrollbar(window)
         sb1.grid(row=2,column=2,rowspan=6)
@@ -110,18 +117,18 @@ class Window(object):
             self.list1.insert(END,row)
 
     def add_command(self):
-        database.insert(self.title_text.get(),self.author_text.get(),self.schoolID_text.get(),self.due_text.get())
+        database.insert(self.title_text.get(),self.author_text.get(),self.schoolID_text.get(),self.type_text.get(),self.due_text.get())
         self.list1.delete(0,END)
-        self.list1.insert(END,(self.title_text.get(),self.author_text.get(),self.schoolID_text.get(),self.due_text.get()))
+        self.list1.insert(END,(self.title_text.get(),self.author_text.get(),self.schoolID_text.get(),self.type_text.get(),self.due_text.get()))
 
     def delete_command(self):
         database.delete(self.selected_tuple[0])
 
     def update_command(self):
-        database.update(self.selected_tuple[0],self.title_text.get(),self.author_text.get(),self.schoolID_text.get(),self.due_text.get())
+        database.update(self.selected_tuple[0],self.title_text.get(),self.author_text.get(),self.schoolID_text.get(),self.type_text.get(),self.due_text.get())
 
 
-# actual tkinter execution processes. 
+# actual tkinter execution processes.
 
 window=Tk()
 Window(window)
