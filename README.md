@@ -25,7 +25,7 @@ Type: Individual
 
 ~~5. Give each book a different ID. Also, each book of same name and same author (but number of copies) will have different ID.~~
 
-~~6. Generate/print weekly report to show books issued to whom and number of days leading to the due date return.~~
+6. Generate/print weekly report to show books issued to whom and number of days leading to the due date return.
 
 7. Generate/print weekly report of detail of fines (when book not returned on time).
 
