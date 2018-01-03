@@ -10,14 +10,7 @@ class Database:
     def __init__(self,db):
         self.conn=sqlite3.connect(db)
         self.cur=self.conn.cursor()
-        self.cur.execute("CREATE TABLE IF NOT EXISTS book(id INTEGER PRIMARY KEY,title text ,author text ,type text )")
-        self.conn.commit()
-
-# creation of loan table
-    def __init__(self,db):
-        self.conn=sqlite3.connect(db)
-        self.cur=self.conn.cursor()
-        self.cur.execute("CREATE TABLE IF NOT EXISTS loan(id INTEGER PRIMARY KEY, due datetime )")
+        self.cur.execute("CREATE TABLE IF NOT EXISTS book(id INTEGER PRIMARY KEY,title text ,author text )")
         self.conn.commit()
 
 # creation of user table
@@ -25,7 +18,15 @@ class Database:
     def __init__(self,db):
         self.conn=sqlite3.connect(db)
         self.cur=self.conn.cursor()
-        self.cur.execute("CREATE TABLE IF NOT EXISTS user(id INTEGER PRIMARY KEY, schoolID INTEGER, userType text )")
+        self.cur.execute("CREATE TABLE IF NOT EXISTS user(id INTEGER PRIMARY KEY, schoolID INTEGER, userType NOT NULL CHECK (Usertype IN ('Student', 'Staff'))")
+        self.conn.commit()
+
+# creation of loan table
+
+    def __init__(self,db):
+        self.conn=sqlite3.connect(db)
+        self.cur=self.conn.cursor()
+        self.cur.execute("CREATE TABLE IF NOT EXISTS loan(id INTEGER PRIMARY KEY )")
         self.conn.commit()
 
 # create the proper layout for the insert function
