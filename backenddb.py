@@ -22,7 +22,8 @@ class Database:
         CREATE TABLE IF NOT EXISTS books(
         id INTEGER NOT NULL PRIMARY KEY,
         title text,
-        author text
+        author text,
+        schoolID INTEGER
             )
         """)
         self.conn.commit()
@@ -35,7 +36,7 @@ class Database:
         self.cur.execute("""
         CREATE TABLE IF NOT EXISTS user(
         id INTEGER NOT NULL PRIMARY KEY,
-        schoolID INTEGER,
+        name text,
         type TEXT check(type = "student" or type = "staff")
             )
         """)
