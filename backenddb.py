@@ -6,6 +6,12 @@ import sqlite3
 
 class Database:
 
+# master TABLE
+    def __init__(self,db):
+        self.conn=sqlite3.connect(db)
+        self.cur=self.conn.cursor()
+        self.cur.execute("CREATE TABLE IF NOT EXISTS master(id INTEGER PRIMARY KEY, booktitle text, bookauthor text, FOREIGN KEY(booktitle, bookauthor) REFRENCES book(title, author))")
+
 # creation of the base table and database
     def __init__(self,db):
         self.conn=sqlite3.connect(db)
@@ -31,7 +37,7 @@ class Database:
 
 # create the proper layout for the insert function
     def insert(self,title,author):
-        self.cur.execute("INSERT into book VALUES (NULL,?,?,?,?,?)",(title,author))
+        self.cur.execute("INSERT into book VALUES (NULL,?,?)",(title,author))
         self.conn.commit()
 
 # create the proper layout for the view function

@@ -56,7 +56,7 @@ class Window(object):
         self.e4=Entry(window,textvariable=self.due_text)
         self.e4.grid(row=1,column=3)
 
-        self.user_text=StringVar()
+        self.type_text=StringVar()
         self.e5=Entry(window,textvariable=self.user_text)
         self.e5.grid(row=2,column=1)
 
@@ -117,9 +117,9 @@ class Window(object):
             self.list1.insert(END,row)
 
     def add_command(self):
-        database.insert(self.title_text.get(),self.author_text.get(),self.schoolID_text.get(),self.user_text.get(),self.due_text.get())
+        database.insert(self.title_text.get(),self.author_text.get())
         self.list1.delete(0,END)
-        self.list1.insert(END,(self.title_text.get(),self.author_text.get(),self.schoolID_text.get(),self.user_text.get(),self.due_text.get()))
+        self.list1.insert(END,(self.title_text.get(),self.author_text.get()))
 
     def delete_command(self):
         database.delete(self.selected_tuple[0])
