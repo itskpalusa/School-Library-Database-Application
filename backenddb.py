@@ -2,6 +2,14 @@
 
 import sqlite3
 
+# import python os
+
+import os
+
+# import datetime library
+
+import datetime
+
 # create the variable class
 
 class Database:
@@ -10,12 +18,13 @@ class Database:
     def __init__(self,db):
         self.conn=sqlite3.connect(db)
         self.cur=self.conn.cursor()
-        self.cur.execute("""CREATE TABLE IF NOT EXISTS books(
+        self.cur.execute("""
+        CREATE TABLE IF NOT EXISTS books(
         id INTEGER NOT NULL PRIMARY KEY,
         title text,
         author text
-        )"""
-        )
+            )
+        """)
         self.conn.commit()
 
 # creation of user table
