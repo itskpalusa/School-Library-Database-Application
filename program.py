@@ -56,7 +56,7 @@ class Window(object):
         self.e4=Entry(window,textvariable=self.due_text)
         self.e4.grid(row=1,column=3)
 
-        self.type_text=StringVar()
+        self.user_text=StringVar()
         self.e5=Entry(window,textvariable=self.user_text)
         self.e5.grid(row=2,column=1)
 

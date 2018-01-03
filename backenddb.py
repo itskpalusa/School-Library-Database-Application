@@ -30,8 +30,8 @@ class Database:
         self.conn.commit()
 
 # create the proper layout for the insert function
-    def insert(self,title,author,schoolID,type,due):
-        self.cur.execute("INSERT into book VALUES (NULL,?,?,?,?,?)",(title,author,schoolID,type,due))
+    def insert(self,title,author):
+        self.cur.execute("INSERT into book VALUES (NULL,?,?,?,?,?)",(title,author))
         self.conn.commit()
 
 # create the proper layout for the view function
@@ -43,8 +43,8 @@ class Database:
 
 # create the proper layout for the search command
 
-    def search(self,title="",author="",schooID="",due=""):
-        self.cur.execute("SELECT * FROM book where title=? OR author=? OR schooID=? OR due=?",(title,author,schoolID,due))
+    def search(self,title="",author=""):
+        self.cur.execute("SELECT * FROM book where title=? OR author=?",(title,author))
         rows=self.cur.fetchall()
         return rows
 
@@ -56,8 +56,8 @@ class Database:
 
 # self-recurring update argument
 
-    def update(self,id,author,title,schoolID,type,due):
-        self.cur.execute("UPDATE book SET title=?,author=?,schoolID=?,due=? WHERE id=?",(title,author,schoolID,type,due,id))
+    def update(self,id,author,title):
+        self.cur.execute("UPDATE book SET title=?,author=? WHERE id=?",(title,author))
         self.conn.commit()
 
     def __del__(self):
