@@ -1,15 +1,12 @@
 # import all of the tkinter framework
 
 from tkinter import *
+import datetime
+import os
 
 # import the backend code and import the database
 
-from backenddb import Database
-
-#create the database - if not already present
-
-database=Database("books.db")
-
+from base-backend import *
 
 # GUI window creation
 
@@ -37,7 +34,7 @@ class Window(object):
         l4=Label(window,text="Due Date")
         l4.grid(row=1,column=2)
 
-        l4=Label(window,text="User Type")
+        l4=Label(window,text="User")
         l4.grid(row=2,column=0)
 
         self.title_text=StringVar()
@@ -56,8 +53,8 @@ class Window(object):
         self.e4=Entry(window,textvariable=self.due_text)
         self.e4.grid(row=1,column=3)
 
-        self.usertype_text=StringVar()
-        self.e5=Entry(window,textvariable=self.usertype_text)
+        self.type_text=StringVar()
+        self.e5=Entry(window,textvariable=self.user_text)
         self.e5.grid(row=2,column=1)
 
         self.list1=Listbox(window, height=10,width=45)
@@ -117,15 +114,15 @@ class Window(object):
             self.list1.insert(END,row)
 
     def add_command(self):
-        database.insert(self.title_text.get(),self.author_text.get(),self.schoolID_text.get(),self.usertype_text.get(),self.due_text.get())
+        database.insert(self.title_text.get(),self.author_text.get())
         self.list1.delete(0,END)
-        self.list1.insert(END,(self.title_text.get(),self.author_text.get(),self.schoolID_text.get(),self.usertype_text.get(),self.due_text.get()))
+        self.list1.insert(END,(self.title_text.get(),self.author_text.get()))
 
     def delete_command(self):
         database.delete(self.selected_tuple[0])
 
     def update_command(self):
-        database.update(self.selected_tuple[0],self.title_text.get(),self.author_text.get(),self.schoolID_text.get(),self.usertype_text.get(),self.due_text.get())
+        database.update(self.selected_tuple[0],self.title_text.get(),self.author_text.get(),self.schoolID_text.get(),self.user_text.get(),self.due_text.get())
 
 
 # actual tkinter execution processes.

@@ -1,17 +1,7 @@
-# import all of the tkinter framework
-
 from tkinter import *
-
-# import the backend code and import the database
-
-from backenddb import Database
-
-#create the database - if not already present
+from backend import Database
 
 database=Database("books.db")
-
-
-# GUI window creation
 
 class Window(object):
 
@@ -19,26 +9,20 @@ class Window(object):
 
         self.window = window
 
-# name of the school/institution through window title.
+        self.window.wm_title("BookStore")
 
-        self.window.wm_title("Elon Musk's School of STEM")
 
-# labeling and grid arrangement
-
-        l1=Label(window,text="Book Title")
+        l1=Label(window,text="Title")
         l1.grid(row=0,column=0)
 
         l2=Label(window,text="Author")
         l2.grid(row=0,column=2)
 
-        l3=Label(window,text="School ID")
+        l3=Label(window,text="Year")
         l3.grid(row=1,column=0)
 
-        l4=Label(window,text="Due Date")
+        l4=Label(window,text="ISBN")
         l4.grid(row=1,column=2)
-
-        l4=Label(window,text="User Type")
-        l4.grid(row=2,column=0)
 
         self.title_text=StringVar()
         self.e1=Entry(window,textvariable=self.title_text)
@@ -48,28 +32,22 @@ class Window(object):
         self.e2=Entry(window,textvariable=self.author_text)
         self.e2.grid(row=0,column=3)
 
-        self.schoolID_text=StringVar()
-        self.e3=Entry(window,textvariable=self.schoolID_text)
+        self.year_text=StringVar()
+        self.e3=Entry(window,textvariable=self.year_text)
         self.e3.grid(row=1,column=1)
 
-        self.due_text=StringVar()
-        self.e4=Entry(window,textvariable=self.due_text)
+        self.isbn_text=StringVar()
+        self.e4=Entry(window,textvariable=self.isbn_text)
         self.e4.grid(row=1,column=3)
 
-        self.usertype_text=StringVar()
-        self.e5=Entry(window,textvariable=self.usertype_text)
-        self.e5.grid(row=2,column=1)
-
-        self.list1=Listbox(window, height=10,width=45)
-        self.list1.grid(row=3,column=0,rowspan=6,columnspan=2)
+        self.list1=Listbox(window, height=6,width=35)
+        self.list1.grid(row=2,column=0,rowspan=6,columnspan=2)
 
         sb1=Scrollbar(window)
         sb1.grid(row=2,column=2,rowspan=6)
 
         self.list1.configure(yscrollcommand=sb1.set)
         sb1.configure(command=self.list1.yview)
-
-        # buttons and grid arrangement
 
         self.list1.bind('<<ListboxSelect>>',self.get_selected_row)
 
@@ -91,8 +69,6 @@ class Window(object):
         b6=Button(window,text="Close", width=12,command=window.destroy)
         b6.grid(row=7,column=3)
 
-    # command function writing
-
     def get_selected_row(self,event):
         if len(self.list1.curselection())>0:
             index=self.list1.curselection()[0]
@@ -113,22 +89,19 @@ class Window(object):
 
     def search_command(self):
         self.list1.delete(0,END)
-        for row in database.search(self.title_text.get(),self.author_text.get(),self.schoolID_text.get(),self.due_text.get()):
+        for row in database.search(self.title_text.get(),self.author_text.get(),self.year_text.get(),self.isbn_text.get()):
             self.list1.insert(END,row)
 
     def add_command(self):
-        database.insert(self.title_text.get(),self.author_text.get(),self.schoolID_text.get(),self.usertype_text.get(),self.due_text.get())
+        database.insert(self.title_text.get(),self.author_text.get(),self.year_text.get(),self.isbn_text.get())
         self.list1.delete(0,END)
-        self.list1.insert(END,(self.title_text.get(),self.author_text.get(),self.schoolID_text.get(),self.usertype_text.get(),self.due_text.get()))
+        self.list1.insert(END,(self.title_text.get(),self.author_text.get(),self.year_text.get(),self.isbn_text.get()))
 
     def delete_command(self):
         database.delete(self.selected_tuple[0])
 
     def update_command(self):
-        database.update(self.selected_tuple[0],self.title_text.get(),self.author_text.get(),self.schoolID_text.get(),self.usertype_text.get(),self.due_text.get())
-
-
-# actual tkinter execution processes.
+        database.update(self.selected_tuple[0],self.title_text.get(),self.author_text.get(),self.year_text.get(),self.isbn_text.get())
 
 window=Tk()
 Window(window)
