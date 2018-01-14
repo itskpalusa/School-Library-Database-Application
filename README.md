@@ -2,7 +2,8 @@
 
 A python and sqlite3 based database application for a school library.
 
-Can also choose to use a pure SQL based application as of right now. Since the base applications on both ends have been created, I am in the process of trying to merge the two data to create a full Python GUI to communicate with a SQL database. So far they aren't exactly cooperation.
+Can also choose to use a pure SQL based application, but how's that fun?
+___
 
 ##### Topic: Develop a database program to manage the issuance of books at a school library. Give the school a name. The program must be able to complete a minimum of the following tasks:
 
@@ -20,6 +21,7 @@ Can also choose to use a pure SQL based application as of right now. Since the b
 
 7. Generate/print weekly report of detail of fines (when book not returned on time).
 
+___
 
 # Requirements
 
@@ -71,6 +73,8 @@ Personally, I recommend using DB browser for SQL lite.
 To install and to learn more about DB browser go to:
 http://sqlitebrowser.org/
 
+___
+___
 
 # To Run
 
