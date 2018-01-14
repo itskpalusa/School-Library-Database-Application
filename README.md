@@ -25,7 +25,7 @@ Can also choose to use a pure SQL based application as of right now. Since the b
 
 ## System Requirements
 
-* You need Python 3.4 or later to be able to run the program.
+### You need Python 3.4 or later to be able to run the program.
 
 You can have multiple Python versions (2.x and 3.x) installed on the same system without problems.
 By default most computer have installed some version of python 2.x, so to install python3:
@@ -38,7 +38,7 @@ For other Linux flavors, OS X and Windows, packages are available at
 
 http://www.python.org/getit/
 
-* This program also uses sqlite3, which you can learn about here:
+### This program also uses sqlite3, which you can learn about here:
 
 https://docs.python.org/2/library/sqlite3.html
 
