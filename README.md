@@ -67,4 +67,12 @@ http://sqlitebrowser.org/
 
 Windows:
 
+1. Download and open zip file
+
+2. Open School-Library-Database-Application/dist/program
+
 Mac, linux, and any other UNIX based operating system:
+
+1. Download and open .ZIP file
+
+2. Open School-Library-Database-Application/dist/program
