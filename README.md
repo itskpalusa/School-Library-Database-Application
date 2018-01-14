@@ -42,6 +42,20 @@ http://www.python.org/getit/
 
 https://docs.python.org/2/library/sqlite3.html
 
-* Lastly, this program also pulls information from one of Python's own library known as TK or formally known as Tkinter. To learn more about Tk:
+To install sqlite3 please follow this link
+
+https://www.sqlite.org/download.html
+
+* Lastly, this program also pulls information from one of Python's own built in library known as TK or formally known as Tkinter. To learn more about Tk:
 
 https://docs.python.org/3/library/tk.html
+
+
+---
+
+This is all you will need to run and execute the program, however if you decide you'd want further customization, this program can also be controlled with any SQL manager, as the database itself is sqlite based.
+
+Personally, I recommend using DB browser for SQL lite.
+
+To install and to learn more about DB browser go to:
+http://sqlitebrowser.org/
