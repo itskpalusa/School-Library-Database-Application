@@ -25,7 +25,7 @@ Can also choose to use a pure SQL based application as of right now. Since the b
 
 ## System Requirements
 
-### You need Python 3.4 or later to be able to run the program.
+### * You need Python 3.4 or later to be able to run the program.
 
 You can have multiple Python versions (2.x and 3.x) installed on the same system without problems.
 By default most computer have installed some version of python 2.x, so to install python3:
@@ -38,7 +38,7 @@ For other Linux flavors, OS X and Windows, packages are available at
 
 http://www.python.org/getit/
 
-### This program also uses sqlite3, which you can learn about here:
+### * This program also uses sqlite3, which you can download and learn about here:
 
 https://docs.python.org/2/library/sqlite3.html
 
@@ -46,16 +46,25 @@ To install sqlite3 please follow this link
 
 https://www.sqlite.org/download.html
 
-* Lastly, this program also pulls information from one of Python's own built in library known as TK or formally known as Tkinter. To learn more about Tk:
+* Lastly, this program also pulls information from many python libraries. The main library is Python's own built in library known as TK or formally known as Tkinter. To learn more about Tk:
 
 https://docs.python.org/3/library/tk.html
+
+* We also use a library called Faker, to create any fake variables, i.e. id number configurations.
 
 
 ---
 
-This is all you will need to run and execute the program, however if you decide you'd want further customization, this program can also be controlled with any SQL manager, as the database itself is sqlite based.
+This is all you will need to run and execute the program, however if you decide you'd want further customization, connection to the server, or any other large computing activity this program can also be controlled with any SQL manager, as the database itself is sqlite based.
 
 Personally, I recommend using DB browser for SQL lite.
 
 To install and to learn more about DB browser go to:
 http://sqlitebrowser.org/
+
+
+# To Run
+
+Windows:
+
+Mac, linux, and any other UNIX based operating system:
