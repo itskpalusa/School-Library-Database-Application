@@ -10,7 +10,7 @@ class Database:
     def __init__(self,db):
         self.conn=sqlite3.connect(db)
         self.cur=self.conn.cursor()
-        self.cur.execute("CREATE TABLE IF NOT EXISTS book(id INTEGER PRIMARY KEY,title text ,author text,schoolID INTEGER ,type text,due datetime )")
+        self.cur.execute("CREATE TABLE IF NOT EXISTS book(id INTEGER PRIMARY KEY,title text ,author text,schoolID INTEGER ,type text,due INTEGER )")
         self.conn.commit()
 
 # create the proper layout for the insert function
@@ -41,7 +41,7 @@ class Database:
 # self-recurring update argument
 
     def update(self,id,author,title,schoolID,type,due):
-        self.cur.execute("UPDATE book SET title=?,author=?,schoolID=?,due=? WHERE id=?",(title,author,schoolID,type,due,id))
+        self.cur.execute("UPDATE book SET title=?,author=?,schoolID=?,type=?,due=? WHERE id=?",(title,author,schoolID,type,due,id))
         self.conn.commit()
 
     def __del__(self):
