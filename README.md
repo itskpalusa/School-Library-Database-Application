@@ -5,21 +5,37 @@ A python and sqlite3 based database application for a school library.
 Can also choose to use a pure SQL based application, but how's that fun?
 ___
 
+## How to use?
+
 ##### Topic: Develop a database program to manage the issuance of books at a school library. Give the school a name. The program must be able to complete a minimum of the following tasks:
 
-~~1. Track student and teacher names with ability to enter/view/edit names.~~
+1. Track student and teacher names with ability to enter/view/edit names.
 
-~~2. Track the issuance of books for a student or teacher.~~
+-- This is very simple, as the GUI has labeled buttons, and you can enter the data and add it into the database with ease. To edit the item, you just need to find it with the view all function and then edit the changes, and then save the content again.
+
+2. Track the issuance of books for a student or teacher.
+
+-- The program will ask you the type of the user, so you can mark it down with either a student or teacher.
 
 3. Manage different limits for the number of books that can be issued to a student or teacher.
 
+-- Teachers will have an extra identification marker for their ID, so it can be organized using that.
+
 4. Manage the number of days that students and teachers can check out any book. (Hint: Mostly like the number of days will differ for students and teachers).
 
-~~5. Give each book a different ID. Also, each book of same name and same author (but number of copies) will have different ID.~~
+-- The SQL database has an interface where it will double check the data once uploaded to the cloud. Students get a maximum of two weeks (before renewal), and teachers can choose whatever date they desire.
 
-~~6. Generate/print weekly report to show books issued to whom and number of days leading to the due date return.~~
+5. Give each book a different ID. Also, each book of same name and same author (but number of copies) will have different ID.
+
+-- The book IDs start at 1, as this uses the basic SQL id number. This also let's us have multiple copies.
+
+6. Generate/print weekly report to show books issued to whom and number of days leading to the due date return.
+
+-- Once you click view all, you can then transport or export the data with ease to print or generate a report.
 
 7. Generate/print weekly report of detail of fines (when book not returned on time).
+
+-- All non returned items will be carried through the database server, and an email will be sent to the head user with the student details.
 
 ___
 
