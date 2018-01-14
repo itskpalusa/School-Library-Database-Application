@@ -1,4 +1,4 @@
-# <center> School Library Database Application <center>
+# <center> School Library Database Application </center>
 
 A python and sqlite3 based database application for a school library.
 
