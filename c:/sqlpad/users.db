@@ -1,0 +1,2 @@
+{"$$indexCreated":{"fieldName":"email","unique":true}}
+{"_id":"BgOKDABdXb97PDYa","email":"karthik.palusa@gmail.com","role":"admin","passhash":"$2a$10$B4GyAxs7MpLiGdvF4JQ0OONvwraarSe97mlJFWhR4bLdQPd01izde","createdDate":{"$$date":1515714167066},"modifiedDate":{"$$date":1515714191850},"signupDate":{"$$date":1515714191850}}
