@@ -45,15 +45,24 @@ https://docs.python.org/2/library/sqlite3.html
 To install sqlite3 please follow this link
 
 https://www.sqlite.org/download.html
+___
 
-* Lastly, this program also pulls information from many python libraries. The main library is Python's own built in library known as TK or formally known as Tkinter. To learn more about Tk:
+## Curious about what else is used?
+
+* This program also pulls information from many python libraries. The main library is Python's own built in library known as TK or formally known as Tkinter. To learn more about Tk:
 
 https://docs.python.org/3/library/tk.html
 
-* We also use a library called Faker, to create any fake variables, i.e. id number configurations.
+* The program also uses a library called Faker, to create any fake variables, i.e. id number configurations.
+
+* Since this program also was created on a mac system, to make it executable for the end user using any OS I used Pyinstaller, which is another program to create executable files for all common OS types. To learn more about Pyinstaller:
+
+http://www.pyinstaller.org/
 
 
 ---
+
+## Want more customization and connection to the servers?
 
 This is all you will need to run and execute the program, however if you decide you'd want further customization, connection to the server, or any other large computing activity this program can also be controlled with any SQL manager, as the database itself is sqlite based.
 
@@ -65,13 +74,15 @@ http://sqlitebrowser.org/
 
 # To Run
 
-Windows:
+All OS systems should have a similar way to run the program, but for efficiency Windows will get its own set of instructions.
+
+#### Windows:
 
 1. Download and open zip file
 
 2. Open School-Library-Database-Application/dist/program
 
-Mac, linux, and any other UNIX based operating system:
+#### Mac, linux, and any other UNIX based operating system:
 
 1. Download and open .ZIP file
 
