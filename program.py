@@ -60,7 +60,7 @@ class Window(object):
         self.e5=Entry(window,textvariable=self.usertype_text)
         self.e5.grid(row=2,column=1)
 
-        self.list1=Listbox(window, height=10,width=45)
+        self.list1=Listbox(window, height=20,width=55)
         self.list1.grid(row=3,column=0,rowspan=6,columnspan=2)
 
         sb1=Scrollbar(window)
