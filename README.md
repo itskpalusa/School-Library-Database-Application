@@ -98,7 +98,7 @@ All OS systems should have a similar way to run the program, but for efficiency 
 
 #### Windows:
 
-1. Download and open zip file
+1. Download and open .ZIP file
 
 2. Open School-Library-Database-Application/dist/program
 
