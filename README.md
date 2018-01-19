@@ -35,7 +35,7 @@ ___
 
 7. Generate/print weekly report of detail of fines (when book not returned on time).
 
--- All non returned items will be carried through the database server, and an email will be sent to the head user with the student details.
+-- All non returned items will be carried through the database server, and an email will be sent to the head user with the student details. This is a back-end call function, to make sure the database is also backed up to the server.
 
 ___
 
@@ -90,6 +90,11 @@ To install and to learn more about DB browser go to:
 http://sqlitebrowser.org/
 
 ___
+
+## DISCLAIMER!
+
+This program, in order to protect the school's privacy, is locally storing the data, and all layers of the program's database are encrypted to the computer's private key. 
+This enables multiple schools to use this program, without databases getting mixed up, and also keeps the data safe. 
 ___
 
 # To Run
