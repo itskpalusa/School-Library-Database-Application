@@ -18,7 +18,7 @@ class Window(object):
     def __init__(self,window):
 
         self.window = window
-
+        
 # name of the school/institution through window title.
 
         self.window.wm_title("Elon Musk's School of STEM")
