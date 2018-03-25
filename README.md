@@ -37,7 +37,28 @@ ___
 
 -- All non returned items will be carried through the database server, and an email will be sent to the head user with the student details. This is a back-end call function, to make sure the database is also backed up to the server.
 
-___
+### To use Demo Data
+
+Since the application uses a method of local encryption, every new computer that is set up without connection to the server will have a blank file. However in the case you do want to add some demo data, an open database file is there.
+
+1. Run the program following the instructions below.
+
+2. Click "view all" and see if a database with content is there or not.
+
+3. Create new content with new data or follow the steps below.
+
+4. Find the file 'books.db' within the program's download file.
+  a. Keep this file handy, you will need it soon.
+
+5. Find out where your computer stored the database file that the program just created for you.
+  a. most computers save it in the local hard drive file.
+  b. please be careful and make sure not to delete anything important.  
+
+#### Now pay attention!
+
+6. Replace the "new" database file that your computer just created, with the dowloaded books.db.
+
+7. If you attempted these steps correctly, restarting the program should open an application with demo user data!
 
 # Requirements
 
@@ -93,8 +114,8 @@ ___
 
 ## DISCLAIMER!
 
-This program, in order to protect the school's privacy, is locally storing the data, and all layers of the program's database are encrypted to the computer's private key. 
-This enables multiple schools to use this program, without databases getting mixed up, and also keeps the data safe. 
+This program, in order to protect the school's privacy, is locally storing the data, and all layers of the program's database are encrypted to the computer's private key.
+This enables multiple schools to use this program, without databases getting mixed up, and also keeps the data safe.
 ___
 
 # To Run
@@ -105,10 +126,10 @@ All OS systems should have a similar way to run the program, but for efficiency 
 
 1. Download and open .ZIP file
 
-2. Open School-Library-Database-Application/dist/program
+2. Open School-Library-Database-Application/dist/program/program
 
 #### Mac, linux, and any other UNIX based operating system:
 
 1. Download and open .ZIP file
 
-2. Open School-Library-Database-Application/dist/program
+2. Open School-Library-Database-Application/dist/program/program
