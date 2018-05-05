@@ -1,7 +1,7 @@
 # import all of the tkinter framework
 
 from tkinter import *
-
+import tkinter.font as tkFont
 # import the backend code and import the database
 
 from backenddb import Database
@@ -18,7 +18,7 @@ class Window(object):
     def __init__(self,window):
 
         self.window = window
-        
+        self.customFont = tkFont.Font(family="Helvetica", size=12)
 # name of the school/institution through window title.
 
         self.window.wm_title("Elon Musk's School of STEM")

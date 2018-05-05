@@ -27,7 +27,7 @@ class Database:
 
 # create the proper layout for the search command
 
-    def search(self,title="",author="",schooID="",due=""):
+    def search(self,title="",author="",schoolID="",due=""):
         self.cur.execute("SELECT * FROM book where title=? OR author=? OR schoolID=? OR due=?",(title,author,schoolID,due))
         rows=self.cur.fetchall()
         return rows
