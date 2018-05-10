@@ -114,7 +114,7 @@ ___
 
 ## DISCLAIMER!
 
-This program, in order to protect the school's privacy, is locally storing the data, and all layers of the program's database are encrypted to the computer's private key.
+This program, in order to protect the school's privacy, is locally storing the data. However, it is easily laid out to establish online connections as well. 
 This enables multiple schools to use this program, without databases getting mixed up, and also keeps the data safe.
 ___
 
